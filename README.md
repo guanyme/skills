@@ -1,23 +1,20 @@
-# vite-plus-starter
+# skills
 
-A starter for creating a Vite Plus project.
+🛠️ Guany's skills
 
-## Development
-
-- Install dependencies:
+## Install
 
 ```bash
-vp install
+vpx skills add guanyme/skills
 ```
 
-- Run the unit tests:
+## Usage
 
-```bash
-vp test
-```
+| Skill      | Description                                      |
+| ---------- | ------------------------------------------------ |
+| profile    | Project setup, toolchain, and coding conventions |
+| convention | Project conventions and documentation standards  |
 
-- Build the library:
+## License
 
-```bash
-vp pack
-```
+[MIT](https://opensource.org/licenses/MIT) © Guany

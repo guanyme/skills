@@ -1,20 +1,11 @@
-import { defineConfig } from "vite-plus";
+import { defineConfig } from 'vite-plus'
 
 export default defineConfig({
   staged: {
-    "*": "vp check --fix",
+    '*': 'vp check --fix',
   },
-  pack: {
-    dts: {
-      tsgo: true,
-    },
-    exports: true,
+  fmt: {
+    semi: false,
+    singleQuote: true,
   },
-  lint: {
-    options: {
-      typeAware: true,
-      typeCheck: true,
-    },
-  },
-  fmt: {},
-});
+})
