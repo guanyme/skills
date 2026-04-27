@@ -1,6 +1,6 @@
 ---
 name: convention
-description: 'Project conventions and documentation standards. Use when creating, writing, or reviewing README files, documentation structure, or project-level conventions. Use when the user asks how to write a README or needs bilingual documentation. Topics: README, documentation, convention, standard, format, bilingual, Chinese, English, README.zh-CN.'
+description: 'Project conventions and documentation standards. Use when creating, writing, or reviewing README files, documentation structure, or project-level conventions. Use when the user asks how to write a README or needs bilingual documentation. Topics: README, documentation, convention, standard, format, bilingual, Chinese, English, README.zh.'
 ---
 
 # Convention
@@ -9,7 +9,7 @@ Project conventions and documentation standards.
 
 ## README
 
-Project README must provide both English (`README.md`) and Chinese (`README.zh-CN.md`) versions, following a fixed structure:
+Project README must provide both English (`README.md`) and Chinese (`README.zh.md`) versions, following a fixed structure:
 
 - One `#` (H1): project name
 - `{{emoji}} {{description}}` directly under H1

@@ -5,7 +5,7 @@
 ## Install
 
 ```bash
-vpx skills add guanyme/skills
+npx skills add guanyme/skills
 ```
 
 ## Usage
