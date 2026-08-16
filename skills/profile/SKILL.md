@@ -1,6 +1,6 @@
 ---
 name: profile
-description: 'Use when working on frontend projects, JavaScript/TypeScript tooling, Python tooling, project setup, dependency installation, formatting, linting, testing, command execution, or runtime environment management. Covers the preferred stack and default commands for fnm, ni, nr, npx, na, uv, uvx, editor, shell, Git, aliases, and code style. Prefer project-local agent documentation for project-specific toolchains, fnm for Node versions, ni for dependency installs, nr for package scripts, npx for common one-off Node tools, na create for supported create-* scaffolds in manual use, pnpm create for non-interactive agent scaffolding unless told otherwise, and uv/uvx for Python dependencies and one-off Python tools; avoid global pip installs.'
+description: 'Use when working on frontend projects, JavaScript/TypeScript tooling, Python tooling, project setup, dependency installation, formatting, linting, testing, command execution, or runtime environment management. Covers the preferred stack and default commands for mise, ni, nr, npx, na, uv, uvx, editor, shell, Git, aliases, and code style. Prefer project-local agent documentation for project-specific toolchains, mise for Node and other runtime versions, ni for dependency installs, nr for package scripts, npx for common one-off Node tools, na create for supported create-* scaffolds in manual use, pnpm create for non-interactive agent scaffolding unless told otherwise, and uv/uvx for Python dependencies and one-off Python tools; avoid global pip installs.'
 ---
 
 # Profile
@@ -27,7 +27,7 @@ Default conventions for project setup, dependency management, and toolchain deci
 | One-off Node Tool    | `npx <tool>`                                                  |
 | Create Scaffolding   | Manual: `na create <name>`; agent: `pnpm create <name>`       |
 | Python Tool          | uv, uvx (avoid global pip installs)                           |
-| Node Version Manager | fnm                                                           |
+| Runtime Versions     | mise (node, pnpm, yarn, java)                                 |
 | Editor               | VS Code + Vitesse Dark theme                                  |
 | Shell                | Oh My Zsh + Starship                                          |
 | Font                 | FiraCode Nerd Font                                            |
@@ -46,6 +46,10 @@ Personal interactive shells on macOS, Linux, and Windows may define short aliase
 - For supported `create-*` scaffolds, manual use prefers `na create <name>`.
 - For agent non-interactive scaffolding, use `pnpm create <name>` unless the user explicitly asks for another command.
 - Use `uv` and `uvx` for Python dependencies and one-off Python tools.
+- Runtime versions come from mise. The global defaults live in `~/.config/mise/config.toml`; a project pins its own with `mise.toml`, `.node-version`, or the `packageManager` field in `package.json`.
+- mise reads `packageManager` and `devEngines`, but **not** the traditional `engines.node` field. A project that relies on `engines.node` needs `mise.toml` or `.node-version` instead.
+- In scripts, systemd units, CI and anything else non-interactive, call the shims by absolute path (`~/.local/share/mise/shims/<tool>`). `mise activate` only runs in interactive shells.
+- **Never write a version number into an executable path.** `.../node-versions/v24.15.0/installation/bin/node` breaks the moment the runtime is upgraded; the shims resolve the version themselves.
 
 ## Code Style
 
