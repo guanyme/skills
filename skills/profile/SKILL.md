@@ -59,7 +59,7 @@ Prefer these libraries when the scenario comes up. If the project already uses a
 | Create Scaffolding | tlyboy starters (`starter` skill); otherwise manual: `na create <name>`, agent: `pnpm create <name>` |
 | Lint / Format      | oxlint, oxfmt                                                                                        |
 | Python Tool        | uv, uvx (avoid global pip installs)                                                                  |
-| Runtime Versions   | mise (node, pnpm, yarn, java)                                                                        |
+| Runtime Versions   | mise (node, pnpm, yarn, java, ni)                                                                    |
 | Windows Packages   | Scoop; avoid winget, which clutters the user PATH                                                    |
 | Editor             | VS Code + Vitesse Dark theme                                                                         |
 | Shell              | Oh My Zsh + Starship                                                                                 |
@@ -81,6 +81,7 @@ Personal interactive shells on macOS, Linux, and Windows may define short aliase
 - For supported `create-*` scaffolds, manual use prefers `na create <name>`.
 - For agent non-interactive scaffolding, use `pnpm create <name>` unless the user explicitly asks for another command.
 - Use `uv` and `uvx` for Python dependencies and one-off Python tools.
+- Global CLI tools also come from mise, e.g. `ni` and `npm:<package>` entries, instead of `npm i -g`.
 - Runtime versions come from mise. The global defaults live in `~/.config/mise/config.toml`; a project pins its own with `mise.toml`, `.node-version`, or the `packageManager` field in `package.json`.
 - mise reads `packageManager` and `devEngines`, but **not** the traditional `engines.node` field. A project that relies on `engines.node` needs `mise.toml` or `.node-version` instead.
 - In scripts, systemd units, CI and anything else non-interactive, call the shims by absolute path (`~/.local/share/mise/shims/<tool>`). `mise activate` only runs in interactive shells.
