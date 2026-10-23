@@ -23,13 +23,13 @@ Project README must provide both English (`README.md`) and Chinese (`README.zh.m
 ```md
 # my-app
 
-🚀 A Vue 3 application
+🚀 A React application
 
-| Category  | Stack      |
-| --------- | ---------- |
-| Framework | Vue 3      |
-| UI        | shadcn-vue |
-| Deploy    | Vercel     |
+| Category  | Stack     |
+| --------- | --------- |
+| Framework | React     |
+| UI        | shadcn/ui |
+| Deploy    | Vercel    |
 
 ## Install
 
