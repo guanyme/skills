@@ -72,6 +72,7 @@ Personal interactive shells on macOS, Linux, and Windows may define short aliase
 - Install dependencies with `ni`.
 - Use `ni --prefer-offline` for prefer-offline manual installs.
 - Run package scripts with `nr <script>` when no alias is being used; script names should follow the project.
+- When `ni` / `nr` are not installed (fresh machines, servers, CI), use the package manager the project declares (`packageManager` field or lockfile) directly, for example `pnpm install` and `pnpm <script>`.
 - Common personal aliases may map to scripts such as `start`, `dev`, `build`, `build --watch`, `test`, `test -u`, `test --watch`, `watch`, `play`, `typecheck`, `lint`, `lint --fix`, and `release`.
 - Project navigation may use personal helpers under `~/i/<namespace>/<project>`, for example personal projects under `~/i/guanyme/`.
 - Run temporary Node commands with `npx <tool>`.
