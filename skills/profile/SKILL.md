@@ -51,19 +51,19 @@ Prefer these libraries when the scenario comes up. If the project already uses a
 
 ## Toolchain
 
-| Category           | Preference                                                    |
-| ------------------ | ------------------------------------------------------------- |
-| Dependency Install | `ni`; use `ni --prefer-offline` for offline-friendly installs |
-| Package Scripts    | `nr <script>`; aliases are for personal interactive use       |
-| One-off Node Tool  | `npx <tool>`                                                  |
-| Create Scaffolding | Manual: `na create <name>`; agent: `pnpm create <name>`       |
-| Lint / Format      | oxlint, oxfmt                                                 |
-| Python Tool        | uv, uvx (avoid global pip installs)                           |
-| Runtime Versions   | mise (node, pnpm, yarn, java)                                 |
-| Editor             | VS Code + Vitesse Dark theme                                  |
-| Shell              | Oh My Zsh + Starship                                          |
-| Font               | FiraCode Nerd Font                                            |
-| Git                | Disable CRLF auto-conversion, Ed25519 SSH                     |
+| Category           | Preference                                                                                           |
+| ------------------ | ---------------------------------------------------------------------------------------------------- |
+| Dependency Install | `ni`; use `ni --prefer-offline` for offline-friendly installs                                        |
+| Package Scripts    | `nr <script>`; aliases are for personal interactive use                                              |
+| One-off Node Tool  | `npx <tool>`                                                                                         |
+| Create Scaffolding | tlyboy starters (`starter` skill); otherwise manual: `na create <name>`, agent: `pnpm create <name>` |
+| Lint / Format      | oxlint, oxfmt                                                                                        |
+| Python Tool        | uv, uvx (avoid global pip installs)                                                                  |
+| Runtime Versions   | mise (node, pnpm, yarn, java)                                                                        |
+| Editor             | VS Code + Vitesse Dark theme                                                                         |
+| Shell              | Oh My Zsh + Starship                                                                                 |
+| Font               | FiraCode Nerd Font                                                                                   |
+| Git                | Disable CRLF auto-conversion, Ed25519 SSH                                                            |
 
 ## Command Habits
 
@@ -75,6 +75,7 @@ Personal interactive shells on macOS, Linux, and Windows may define short aliase
 - Common personal aliases may map to scripts such as `start`, `dev`, `build`, `build --watch`, `test`, `test -u`, `test --watch`, `watch`, `play`, `typecheck`, `lint`, `lint --fix`, and `release`.
 - Project navigation may use personal helpers under `~/i/<namespace>/<project>`, for example personal projects under `~/i/guanyme/`.
 - Run temporary Node commands with `npx <tool>`.
+- For a new project, check the `starter` skill (tlyboy starters pulled with giget) first; for Docker Compose services, the `compose` skill.
 - For supported `create-*` scaffolds, manual use prefers `na create <name>`.
 - For agent non-interactive scaffolding, use `pnpm create <name>` unless the user explicitly asks for another command.
 - Use `uv` and `uvx` for Python dependencies and one-off Python tools.
