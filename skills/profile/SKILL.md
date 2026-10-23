@@ -60,6 +60,7 @@ Prefer these libraries when the scenario comes up. If the project already uses a
 | Lint / Format      | oxlint, oxfmt                                                                                        |
 | Python Tool        | uv, uvx (avoid global pip installs)                                                                  |
 | Runtime Versions   | mise (node, pnpm, yarn, java)                                                                        |
+| Windows Packages   | Scoop; avoid winget, which clutters the user PATH                                                    |
 | Editor             | VS Code + Vitesse Dark theme                                                                         |
 | Shell              | Oh My Zsh + Starship                                                                                 |
 | Font               | FiraCode Nerd Font                                                                                   |
