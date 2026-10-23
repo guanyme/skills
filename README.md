@@ -10,10 +10,10 @@ npx skills add guanyme/skills
 
 ## Usage
 
-| Skill      | Description                                      |
-| ---------- | ------------------------------------------------ |
-| profile    | Project setup, toolchain, and coding conventions |
-| convention | Project conventions and documentation standards  |
+| Skill      | Description                                              |
+| ---------- | -------------------------------------------------------- |
+| profile    | Tech stack, libraries, toolchain, and commit conventions |
+| convention | Project conventions and documentation standards          |
 
 ## License
 
